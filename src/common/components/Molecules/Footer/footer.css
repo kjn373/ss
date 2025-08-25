@@ -1,0 +1,14 @@
+footer {
+  background-image: url('/ss/Footer.png');
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* @media screen and (max-width: 768px) {
+  footer {
+    background-color: blue;
+    background-image: none;
+  }
+} */

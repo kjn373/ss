@@ -1,0 +1,38 @@
+trigger: none
+
+pool:
+  name: Build server
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install pnpm -g
+      pnpm install
+    displayName: 'pnpm install'
+
+  - task: DownloadSecureFile@1
+    inputs:
+      secureFile: 'pawan-prakriti.env'
+    displayName: 'Downloading the .env file'
+
+  - bash: |
+      mv $(Agent.TempDirectory)/pawan-prakriti.env $(Agent.TempDirectory)/.env
+    displayName: 'Rename env file'
+
+    # Copy the .env file
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Agent.TempDirectory)'
+      contents: '**/*.env'
+      targetFolder: '$(Build.SourcesDirectory)'
+      cleanTargetFolder: false
+    displayName: 'Copy the .env file'
+
+  - script: |
+      pnpm run build
+    displayName: 'pnpm build'

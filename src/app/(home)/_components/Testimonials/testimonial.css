@@ -1,0 +1,26 @@
+#testimonial .swiper-button-prev {
+  /* background-image: url('/home/buttonleft.svg') !important; */
+  width: 32px !important;
+  height: 32px !important;
+}
+
+#testimonial .swiper-button-next {
+  /* background-image: url('/home/buttonright.svg') !important; */
+  width: 32px !important;
+  height: 32px !important;
+}
+
+#testimonial .swiper-button-next::after,
+#testimonial .swiper-button-prev::after {
+  content: '' !important;
+}
+
+.swiper-navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}

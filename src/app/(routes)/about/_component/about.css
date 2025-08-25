@@ -1,0 +1,102 @@
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .custom-pagination {
+    gap: 12px;
+  }
+}
+
+.custom-card {
+  position: relative;
+  width: 292px;
+  height: 72px;
+  padding: 10px;
+  background: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  justify-content: start;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.custom-card-timer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #007aff;
+  border-radius: 2px;
+  transition: width 2s linear;
+}
+
+.custom-card.active .custom-card-timer {
+  animation: fill 10s linear forwards;
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.custom-card .swiper-pagination-bullet-active {
+  border-bottom: 2px solid #007aff;
+}
+
+#director .swiper-pagination-bullet {
+  opacity: 1;
+  border-bottom: #e7eef8 2px solid;
+}
+
+.custom-card-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.custom-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.custom-card-info h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.custom-card-info p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5d5f69;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .custom-card {
+    width: 158px;
+  }
+  .custom-card-image {
+    display: none;
+  }
+}

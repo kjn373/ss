@@ -1,0 +1,18 @@
+.terms-content h1,
+.terms-content h2,
+.terms-content h3,
+.terms-content h4,
+.terms-content h5,
+.terms-content h6 {
+  font-size: 28px;
+  color: #313131;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+}
+
+.terms-content p {
+  font-size: 16px;
+  color: #5d5f69;
+  font-weight: 400;
+  font-family: var(--font-workSans);
+}

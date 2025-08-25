@@ -1,0 +1,31 @@
+.diagonal-border {
+  position: absolute;
+  width: 236px;
+  height: 236px;
+  /* background: transparent; */
+  border: 2px solid transparent;
+  border-top: 2px solid #187ec0;
+  border-bottom: 2px solid #187ec0;
+  transform: rotate(45deg);
+  z-index: -1;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .diagonal-border {
+    width: 304px;
+    height: 304px;
+  }
+}
+
+.group:hover .diagonal-border {
+  transform: rotate(-45deg);
+}
+
+.group:hover .overlay {
+  opacity: 1;
+}
+
+.group:hover .icons {
+  opacity: 1;
+}
