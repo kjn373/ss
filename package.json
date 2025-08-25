@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "bash .husky/husky-prepare.sh",
+    "prepare": "powershell -ExecutionPolicy Bypass -File .husky/husky-prepare.ps1",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

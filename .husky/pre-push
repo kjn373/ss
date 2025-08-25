@@ -6,5 +6,3 @@ npx validate-branch-name
 git add ${added_files}
 
 pnpm typecheck
-
-
